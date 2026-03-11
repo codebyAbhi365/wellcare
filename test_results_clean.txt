@@ -1,0 +1,114 @@
+﻿
+--- Testing: model=gemini/text-embedding-004, api_version=v1beta ---
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+FAILED: litellm.NotFoundError: GeminiException - {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+
+--- Testing: model=gemini/text-embedding-004, api_version=v1 ---
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+FAILED: litellm.NotFoundError: GeminiException - {
+  "error": {
+    "code": 404,
+    "message": "models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+
+--- Testing: model=gemini/embedding-001, api_version=v1beta ---
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+FAILED: litellm.NotFoundError: GeminiException - {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+
+--- Testing: model=gemini/embedding-001, api_version=v1 ---
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+FAILED: litellm.NotFoundError: GeminiException - {
+  "error": {
+    "code": 404,
+    "message": "models/embedding-001 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+
+--- Testing: model=gemini/gemini-embedding-001, api_version=v1beta ---
+SUCCESS! Vector length: 3072
+
+--- Testing: model=gemini/gemini-embedding-001, api_version=v1 ---
+SUCCESS! Vector length: 3072
+
+--- Testing: model=gemini/models/text-embedding-004, api_version=v1beta ---
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+FAILED: litellm.NotFoundError: GeminiException - 
+
+--- Testing: model=gemini/models/text-embedding-004, api_version=v1 ---
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+FAILED: litellm.NotFoundError: GeminiException - 
+
+--- Testing: model=gemini/models/embedding-001, api_version=v1beta ---
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+FAILED: litellm.NotFoundError: GeminiException - 
+
+--- Testing: model=gemini/models/embedding-001, api_version=v1 ---
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+FAILED: litellm.NotFoundError: GeminiException - 
+
+==============================
+FINAL SUCCESSFUL CONFIGS:
+Model: gemini/gemini-embedding-001, Version: v1beta
+Model: gemini/gemini-embedding-001, Version: v1
+==============================

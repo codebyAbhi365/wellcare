@@ -1,0 +1,85 @@
+Traceback (most recent call last):
+  File "<string>", line 3, in <module>
+  File "C:\Program Files\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\abhishek dipak kadam\OneDrive\Desktop\WellCare v2.o\skin_agent\mycognee.py", line 24, in main
+    await cognee.cognify()
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\api\v1\cognify\cognify.py", line 234, in cognify
+    return await pipeline_executor_func(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\layers\pipeline_execution_mode.py", line 34, in run_pipeline_blocking
+    async for run_info in agen:
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\pipeline.py", line 52, in run_pipeline
+    async for run_info in run_pipeline_per_dataset(
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\pipeline.py", line 111, in run_pipeline_per_dataset
+    async for pipeline_run_info in pipeline_run:
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\run_tasks.py", line 45, in wrapper
+    async for run_info in original_gen(*args, **kwargs):
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\run_tasks.py", line 167, in run_tasks
+    raise error
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\run_tasks.py", line 117, in run_tasks
+    results.extend(await asyncio.gather(*data_item_tasks))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\run_tasks_data_item.py", line 237, in run_tasks_data_item
+    async for result in run_tasks_data_item_incremental(
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\run_tasks_data_item.py", line 148, in run_tasks_data_item_incremental
+    raise error
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\run_tasks_data_item.py", line 99, in run_tasks_data_item_incremental
+    async for result in run_tasks_with_telemetry(
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\run_tasks_with_telemetry.py", line 68, in run_tasks_with_telemetry
+    raise error
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\run_tasks_with_telemetry.py", line 36, in run_tasks_with_telemetry
+    async for result in run_tasks_base(tasks, data, user, context):
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\run_tasks_base.py", line 156, in run_tasks_base
+    async for result in handle_task(
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\run_tasks_base.py", line 140, in handle_task
+    raise error
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\run_tasks_base.py", line 113, in handle_task
+    async for result in run_tasks_base(leftover_tasks, result_data, user, context):
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\run_tasks_base.py", line 156, in run_tasks_base
+    async for result in handle_task(
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\run_tasks_base.py", line 140, in handle_task
+    raise error
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\run_tasks_base.py", line 113, in handle_task
+    async for result in run_tasks_base(leftover_tasks, result_data, user, context):
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\run_tasks_base.py", line 156, in run_tasks_base
+    async for result in handle_task(
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\run_tasks_base.py", line 140, in handle_task
+    raise error
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\operations\run_tasks_base.py", line 105, in handle_task
+    async for result_data in running_task.execute(args, kwargs, next_task_batch_size):
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\tasks\task.py", line 96, in execute
+    async for result in self._execute_method(args, kwargs):
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\modules\pipelines\tasks\task.py", line 83, in execute_coroutine
+    task_result = await self.run(*args, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\tasks\graph\extract_graph_from_data.py", line 208, in extract_graph_from_data
+    return await integrate_chunk_graphs(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\tasks\graph\extract_graph_from_data.py", line 127, in integrate_chunk_graphs
+    await add_data_points(
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\tasks\storage\add_data_points.py", line 96, in add_data_points
+    await index_data_points(nodes)
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\tasks\storage\index_data_points.py", line 63, in index_data_points
+    await asyncio.gather(*tasks)
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\infrastructure\databases\vector\lancedb\LanceDBAdapter.py", line 342, in index_data_points
+    await self.create_data_points(
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\infrastructure\databases\vector\lancedb\LanceDBAdapter.py", line 194, in create_data_points
+    create_lance_data_point(data_point, data_vectors[data_point_index])
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\cognee\infrastructure\databases\vector\lancedb\LanceDBAdapter.py", line 187, in create_lance_data_point
+    return LanceDataPoint[str, self.get_data_point_schema(type(data_point))](
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abhishek dipak kadam\AppData\Roaming\Python\Python312\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LanceDataPoint[str, IndexSchema]
+vector
+  List should have at least 4096 items after validation, not 0 [type=too_short, input_value=[], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.12/v/too_short
